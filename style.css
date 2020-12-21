@@ -75,6 +75,11 @@ main h2{
     color:blueviolet;
 }
 
+.check{
+    color: rgb(167, 154, 154);
+    cursor:pointer;
+}
+
 .add-todo{
     text-align: center;
     width: 100%;
@@ -119,6 +124,10 @@ main h2{
 
     #app li{
         
+    }
+
+    .check{
+        margin-right: 10px;
     }
 
     .add-todo{

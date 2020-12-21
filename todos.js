@@ -9,6 +9,9 @@ function renderTodos(){
     for (todo of todos){
 
             var todoElement = document.createElement('li');
+            var todoCheck = document.createElement('i');
+            todoCheck.setAttribute('class','fas fa-check-circle check');
+            todoCheck.setAttribute('onclick','this.style.color = "rgb(9, 231, 21)"');
             var todoText = document.createTextNode(todo);
             var linkElement = document.createElement('a');
             linkElement.setAttribute('href','#');
@@ -16,14 +19,15 @@ function renderTodos(){
             linkElement.setAttribute('onclick', 'deleteTodo(' + pos + ')')
             var linkText = document.createElement('i');
             linkElement.setAttribute('class','far fa-times-circle');
-            linkElement.appendChild(linkText);
 
-            todoElement.appendChild(todoText);
+            linkElement.appendChild(linkText);
+            todoElement.appendChild(todoCheck);
+            todoElement.appendChild(todoText);       
             todoElement.appendChild(linkElement);
             listElement.appendChild(todoElement);        
     }
 }
-}
+
 
 renderTodos();
     
@@ -49,6 +53,7 @@ function deleteTodo(pos){
     renderTodos();
     saveToStorage();
 }
+
 
 function saveToStorage(){
     localStorage.setItem('list_todos', JSON.stringify(todos));
