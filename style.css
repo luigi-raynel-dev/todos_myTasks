@@ -68,11 +68,14 @@ main h2{
     justify-content: space-between;
 }
 
-#app li a{
+#app li button{
     position: relative; 
-    top: 6px;
-    text-decoration: none;
+    
+    cursor: pointer;
+    background-color:transparent;
+    border: 0;
     color:blueviolet;
+    font-size: 17px;
 }
 
 .check{

@@ -13,8 +13,7 @@ function renderTodos(){
             todoCheck.setAttribute('class','fas fa-check-circle check');
             todoCheck.setAttribute('onclick','this.style.color = "rgb(9, 231, 21)"');
             var todoText = document.createTextNode(todo);
-            var linkElement = document.createElement('a');
-            linkElement.setAttribute('href','#');
+            var linkElement = document.createElement('button');
             var pos = todos.indexOf(todo);
             linkElement.setAttribute('onclick', 'deleteTodo(' + pos + ')')
             var linkText = document.createElement('i');
