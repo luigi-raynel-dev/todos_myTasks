@@ -11,8 +11,7 @@ function renderTodos(){
             var todoElement = document.createElement('li');
             var todoCheck = document.createElement('i');
             todoCheck.setAttribute('class','fas fa-check-circle check');
-            todoCheck.setAttribute('id','teste');
-            todoCheck.setAttribute('onclick','checked()');
+            todoCheck.setAttribute('onclick','this.style.color = "rgb(9, 231, 21)"')
             var todoText = document.createTextNode(todo);
             var linkElement = document.createElement('button');
             var pos = todos.indexOf(todo);
@@ -52,12 +51,6 @@ function deleteTodo(pos){
     todos.splice(pos, 1);
     renderTodos();
     saveToStorage();
-}
-
-function checked(){
-    //this.style.color = "rgb(9, 231, 21)"
-    var testeCheck = document.getElementById('teste');
-    testeCheck.style.backgroundColor = "rgb(9, 231, 21);"
 }
 
 function saveToStorage(){
